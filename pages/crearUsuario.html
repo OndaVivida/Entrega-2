@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloUsuarios.css">
+    <link rel="stylesheet" href="../css/estiloBarra.css">
+    <title>Crear Usuario</title>
+</head>
+<body>
+    <div class="barraSuperior">
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="./iniciarSesion.html" id="sesionActual">Iniciar sesión</a>
+        </nav>
+    </div>
+
+    <h1 class="tituloPrincipal">Crear Cuenta</h1>
+    <form class="cuerpo">
+        <h3 class="renglonUno">Usuario</h3>
+        <input type="text" name="crearUsuario" required>
+        <h3 class="otrosRenglones">Correo Electónico</h3>
+        <input type="email" name="crearEmail" required>
+        <h3 class="otrosRenglones">Contraseña</h3>
+        <input type="password" name="crearContraseña" required>
+        <h3 class="otrosRenglones">Repetir Contraseña</h3>
+        <input type="password" name="crearContraseñaRepetida" required>
+        <p>
+            <input class="boton" type="submit" value="Crear Cuenta">
+        </p>
+        <div>
+            <a href="./iniciarSesion.html">Ya tengo una cuenta</a>
+        </div>
+    </form>
+    <h2 class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+</body>
+</html>

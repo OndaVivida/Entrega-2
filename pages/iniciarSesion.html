@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloUsuarios.css">
+    <link rel="stylesheet" href="../css/estiloBarra.css">
+    <script defer src="../js/iniciarSesion.js"></script>
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <div class="barraSuperior">
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="./crearUsuario.html">Crear Usuario</a>
+        </nav>
+    </div>
+
+    <h1 class="tituloPrincipal">Iniciar Sesión</h1>
+    <form class="cuerpo" id="formularioIniciarSesion">
+        <h3 class="renglonUno">Usuario</h3>
+        <input type="text" id="usuario" required>
+        <h3 class="otrosRenglones">Contraseña</h3>
+        <input type="password" id="contraseña" required>
+        <p id="pieBoton">
+            <input class="boton" type="submit" value="Iniciar sesión">
+        </p>
+        <div>
+            <a href="./recuperarCuenta.html">Olvidé la contraseña</a>
+            <a href="./crearUsuario.html">No tengo una cuenta</a>
+        </div>
+    </form>
+    <h2 class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+</body>
+</html>
