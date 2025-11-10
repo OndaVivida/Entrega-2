@@ -1,19 +1,5 @@
 const baseDeDatos = JSON.parse(localStorage.getItem("Base de Datos de Productos"))
 
-if (localStorage.getItem("Usuario Activo")){
-    let usuario = localStorage.getItem("Usuario Activo")
-    let botonSesion = document.getElementById("sesionActual")
-    let tope = document.getElementById("inicio")
-    let lugarSesion = document.getElementById("barraSuperior")
-
-    let sesion = document.createElement("a")
-    sesion.setAttribute("href", "./pages/cerrarSesion.html")
-    sesion.setAttribute("id","sesionActual")
-    sesion.innerText = usuario.toUpperCase()
-    lugarSesion.insertBefore(sesion, tope)
-    lugarSesion.removeChild(botonSesion)
-}
-
 borrarCarrito = document.getElementById("borrarCarrito")
 borrarCarrito.onclick = () => {
     localStorage.removeItem("carrito")

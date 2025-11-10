@@ -1,21 +1,6 @@
 // Variables globales
 const baseDeDatos = JSON.parse(localStorage.getItem("Base de Datos de Productos"))
 
-
-if (localStorage.getItem("Usuario Activo")){
-    let usuario = localStorage.getItem("Usuario Activo")
-    let botonSesion = document.getElementById("sesionActual")
-    let topeCarrito = document.getElementById("carrito")
-    let lugarSesion = document.getElementById("barraSuperior")
-
-    let sesion = document.createElement("a")
-    sesion.setAttribute("href", "./pages/cerrarSesion.html")
-    sesion.setAttribute("id","sesionActual")
-    sesion.innerText = usuario.toUpperCase()
-    lugarSesion.insertBefore(sesion, topeCarrito)
-    lugarSesion.removeChild(botonSesion)
-}
-
 filtrarBaseDeDatos = () => {
     let filtroListaPrecio = document.getElementById("filtroListaPrecio")
     let filtroListaTipo = document.getElementById("filtroListaTipo")

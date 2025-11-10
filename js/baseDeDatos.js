@@ -42,22 +42,3 @@ baseDeDatosDeProductosInmutable.push(new creadorProductos("Drywall 6x1\" en Punt
 baseDeDatosDeProductosInmutable.push(new creadorProductos("Drywall 6x1 1/4\" para Perfilería", "Tornillo fosfatado para montaje de perfiles y placas, alta penetración.", "drywall", 300, 13.4))
 
 localStorage.setItem("Base de Datos de Productos", JSON.stringify(baseDeDatosDeProductosInmutable))
-
-// Bien inseguro
-class creadorUsuarios{
-    static id = 0
-    constructor(nombre, correo, contraseña){
-        this.id = ++creadorUsuarios.id
-        this.nombre = nombre
-        this.correo = correo
-        this.contraseña = contraseña
-    }
-}
-
-let baseDeDatosDeUsuarios = []
-
-baseDeDatosDeUsuarios.push(new creadorUsuarios("admin", "admin@lodecarloh.com", "cisco"))
-baseDeDatosDeUsuarios.push(new creadorUsuarios("carloh", "carloh@lodecarloh.com", "cisco"))
-baseDeDatosDeUsuarios.push(new creadorUsuarios("nahuel", "sin_correo@yahoo.com", "abcs123"))
-
-localStorage.setItem("Base de Datos de Usuarios Insegura", JSON.stringify(baseDeDatosDeUsuarios))
