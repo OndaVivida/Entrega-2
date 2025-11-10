@@ -9,31 +9,24 @@ filtrarBaseDeDatos = () => {
 
     switch (ordenarLista.value) {
         case "ordenarPorMayorPrecio":
-            console.log("caso 1")
             baseDeDatosEditada = baseDeDatosEditada.sort((a, b) => b.precio - a.precio)
             break
         case "ordenarPorMenorPrecio":
-            console.log("caso 2")
             baseDeDatosEditada = baseDeDatosEditada.sort((a, b) => a.precio - b.precio)
             break
         case "ordenarPorMayorCantidad":
-            console.log("caso 3")
             baseDeDatosEditada = baseDeDatosEditada.sort((a, b) => b.cantidad - a.cantidad)
             break
         case "ordenarPorMenorCantidad":
-            console.log("caso 4")
             baseDeDatosEditada = baseDeDatosEditada.sort((a, b) => a.cantidad - b.cantidad)
             break
         case "ordenarPorTipoAZ":
-            console.log("caso 5")
             baseDeDatosEditada = baseDeDatosEditada.sort((a, b) => a.tipo.localeCompare(b.tipo))
             break
         case "ordenarPorTipoZA":
-            console.log("caso 6")
             baseDeDatosEditada = baseDeDatosEditada.sort((a, b) => b.tipo.localeCompare(a.tipo))
             break
         case "":
-            console.log("caso 7")
             baseDeDatosEditada = baseDeDatosEditada.sort((a, b) => a.id - b.id)
             break
     }

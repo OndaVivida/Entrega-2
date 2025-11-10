@@ -66,18 +66,15 @@ function cargarCarritoGuardado(carrito) {
     let repeticiones = 0
     let datoActual = 0
     carrito = carrito.sort((a, b) => a - b)
-    console.log(carrito)
     while (carrito.length) {
         do {
             repeticiones++
             datoActual = carrito.shift()
         }while (datoActual == carrito[0])
-        console.log(`numero ${datoActual} se repite ${repeticiones} veces`) //funciona!!!!!!!!
-
+            
         datosPreProcesados.push(new datosRepetidos(datoActual, repeticiones))
         repeticiones = 0
     }
-
     datosPreProcesados.forEach(dato => {
         let datosEnProcesamiento = baseDeDatos.find(i => i.id == dato.id)
         datosEnProcesamiento.duplicado = dato.repeticiones
