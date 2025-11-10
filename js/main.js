@@ -1,6 +1,11 @@
 // Variables globales
 const baseDeDatos = JSON.parse(localStorage.getItem("Base de Datos de Productos"))
 
+if (!localStorage.getItem("carrito")) {
+    let array = []
+    localStorage.setItem("carrito", JSON.stringify(array))
+}
+
 filtrarBaseDeDatos = () => {
     let filtroListaPrecio = document.getElementById("filtroListaPrecio")
     let filtroListaTipo = document.getElementById("filtroListaTipo")
@@ -61,9 +66,9 @@ filtroListaTipo.onchange = () => filtrarBaseDeDatos()
 
 actualizarIcono = () => {
     let carritoIcono = document.getElementById("carrito")
-    carritoIcono.innerText = `Carrito ${JSON.parse(localStorage.getItem("carrito")).length}`
+    carritoIcono.innerText = `Carrito ${JSON.parse(localStorage.getItem("carrito")).length || ""}`
 }
-
+actualizarIcono()
 
 activarCarrito = () => {
     let botones = document.getElementsByClassName("botonCompra")
@@ -75,7 +80,7 @@ activarCarrito = () => {
 }
 
 agregarAlCarrito = (id) =>{
-    let carrito = (JSON.parse(localStorage.getItem("carrito")) ?? [])
+    let carrito = JSON.parse(localStorage.getItem("carrito"))
     carrito.push(id)
     localStorage.setItem("carrito", JSON.stringify(carrito))
     actualizarIcono()
