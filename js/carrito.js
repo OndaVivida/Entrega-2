@@ -3,7 +3,8 @@ const baseDeDatos = JSON.parse(localStorage.getItem("Base de Datos de Productos"
 
 borrarCarrito = document.getElementById("borrarCarrito")
 borrarCarrito.onclick = () => {
-    localStorage.removeItem("carrito")
+    let array = []
+    localStorage.setItem("carrito", JSON.stringify(array))
     listadoDeProductos("")
 }
 
