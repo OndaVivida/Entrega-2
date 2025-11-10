@@ -63,7 +63,6 @@ actualizarIcono = () => {
     let carritoIcono = document.getElementById("carrito")
     carritoIcono.innerText = `Carrito ${JSON.parse(localStorage.getItem("carrito")).length}`
 }
-actualizarIcono()
 
 
 activarCarrito = () => {
