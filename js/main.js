@@ -59,6 +59,13 @@ filtroListaPrecio.onchange = () => filtrarBaseDeDatos()
 let filtroListaTipo = document.getElementById("filtroListaTipo")
 filtroListaTipo.onchange = () => filtrarBaseDeDatos()
 
+actualizarIcono = () => {
+    let carritoIcono = document.getElementById("carrito")
+    carritoIcono.innerText = `Carrito ${JSON.parse(localStorage.getItem("carrito")).length}`
+}
+actualizarIcono()
+
+
 activarCarrito = () => {
     let botones = document.getElementsByClassName("botonCompra")
     for (let boton of botones) {
@@ -72,6 +79,7 @@ agregarAlCarrito = (id) =>{
     let carrito = (JSON.parse(localStorage.getItem("carrito")) ?? [])
     carrito.push(id)
     localStorage.setItem("carrito", JSON.stringify(carrito))
+    actualizarIcono()
 }
 
 
